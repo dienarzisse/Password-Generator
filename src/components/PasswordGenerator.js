@@ -65,7 +65,7 @@ function PasswordGenerator(){
         let sum = ~~upperCase + ~~lowerCase + ~~hasNumbers + ~~hasSymbols;
         if(passLen < 10)
             setStrength("too-weak");
-        else if( passLen >= 20 )
+        else if( passLen >= 15 )
                 setStrength("medium");
         else
             switch(sum){
@@ -114,7 +114,7 @@ function PasswordGenerator(){
                         <p>Character Length</p>
                         <span>{ passLen }</span>
                     </section>
-                    <input className="slider" onChange={ handleSlide } type="range" min="1" max="30" defaultValue={ passLen } id="myRange"></input>
+                    <input className="slider" onChange={ handleSlide } type="range" min="1" max="20" defaultValue={ passLen } id="myRange"></input>
                 </div>
                 <div className="password-criterias">
                     <div className="criteria">
